@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	games "gitlab.com/test-group3671509/source/go-lang-service/pkg/service-tests/httpserver"
+	games "github.com/scsannalli/infracubator/golang/src"
 )
 
 func TestGETGameDetails(t *testing.T) {
