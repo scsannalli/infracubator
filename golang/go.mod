@@ -1,3 +1,3 @@
-module github.com/scsannalli/infracubator/golang/src
+module github.com/scsannalli/infracubator
 
 go 1.20
