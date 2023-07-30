@@ -9,4 +9,4 @@ RUN go build -o /go-docker-demo
 
 EXPOSE 3333
 
-CMD [ "/golang/src" ]
+CMD [ "/go-docker-demo" ]
