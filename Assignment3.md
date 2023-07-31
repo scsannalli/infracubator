@@ -1,7 +1,7 @@
 # infracubator
 Exercises and commands to work with Docker and Kubernetes
 
-## Docker Commands
+## Docker Commands - multistage docker files
 
 ### Running Docker container of golang app using multistage docker file
 1. Create a go lang app: `application source code is placed under `/golang` folder`
