@@ -4,19 +4,19 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
-	"log"
 )
 
-func Greet(name string) (string) {
+func Greet(name string) string {
 	return "Hello " + name
-} 
+}
 
 func main() {
+	fmt.Printf("Serving Application !!!!!!! \n")
 	http.HandleFunc("/", getRoot)
 	http.HandleFunc("/game", getGame)
-
 	err := http.ListenAndServe(":3333", nil)
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Printf("server closed\n")
@@ -29,14 +29,13 @@ func main() {
 func getRoot(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got / request\n")
 	if _, err := io.WriteString(w, "Hello World!\n"); err != nil {
-		log.Fatal(err);
+		log.Fatal(err)
 	}
 }
 
 func getGame(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got /game request\n")
 	if _, err := io.WriteString(w, "Starting Game\n"); err != nil {
-		log.Fatal(err);
+		log.Fatal(err)
 	}
 }
-
