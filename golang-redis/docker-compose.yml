@@ -1,0 +1,22 @@
+services:
+  go-app:
+    image: go-redis-service
+    networks:
+      - my-network
+    depends_on:
+      - redis
+    ports:
+      - 8080:8080
+    environment:
+      - REDIS_HOST=my-redis
+  
+  redis:
+    image: redis:latest
+    container_name: my-redis
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
