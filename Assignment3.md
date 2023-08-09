@@ -15,7 +15,7 @@ Exercises and commands to work with Docker and Kubernetes
     ```
    docker build --target run -t go-lang-service-run .
    ```
-   `go-lang-service` is the user defined image name
+   `go-lang-service-run` is the user defined image name
 
 5. run the container to start go-lang-application
     ```
